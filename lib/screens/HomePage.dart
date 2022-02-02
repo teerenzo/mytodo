@@ -24,12 +24,16 @@ class _HomePageState extends State<HomePage> {
   late bool isSelected;
   late List<Todo> newTodo;
   bool isEmpty=true;
+  late int taskDone,activeTask,activeHigh;
   bool isLoading=false;
   late String? all,all1='';
   List<Todo> todo=[];
   @override
   void initState() {
     // TODO: implement initState
+    taskDone=0;
+    activeTask=0;
+    activeHigh=0;
     filterBy='';
     refreshTodo();
 isSelected=false;
@@ -51,12 +55,26 @@ isSelected=false;
       todo=newTodo;
     });
 
+
+
   }
 
 
   @override
   Widget build(BuildContext context) {
+    todo.map((e) => {
+      if(e.status=='done'){
+      taskDone++
+      },
+      if(e.Priority=='2'){
+         activeHigh++
+      }else if(e.status=='no'){
+    activeTask++
+      }else{
 
+      }
+
+    });
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body:  ListView.builder(
@@ -168,7 +186,7 @@ mainAxisAlignment: MainAxisAlignment.start,
                                     ),
                                   ), Card(
                                     child: ListTile(
-                                      title: Text("0",style: TextStyle(
+                                      title: Text(activeTask.toString(),style: TextStyle(
                                           color: HexColor("#C1CF16"),
                                           fontFamily: "Montserrat Bold"
                                       ),
@@ -177,7 +195,7 @@ mainAxisAlignment: MainAxisAlignment.start,
                                     ),
                                   ), Card(
                                     child: ListTile(
-                                      title: Text("0",style: TextStyle(
+                                      title: Text(taskDone.toString(),style: TextStyle(
                                           color: HexColor("#C1CF16"),
                                           fontFamily: "Montserrat Bold"
                                       ),
@@ -186,7 +204,7 @@ mainAxisAlignment: MainAxisAlignment.start,
                                     ),
                                   ), Card(
                                     child: ListTile(
-                                      title: Text("0",style: TextStyle(
+                                      title: Text(activeHigh.toString(),style: TextStyle(
                                           color: HexColor("#C1CF16"),
                                           fontFamily: "Montserrat Bold"
                                       ),
