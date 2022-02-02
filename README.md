@@ -6,7 +6,8 @@ to do app
 
 To run this app you need the following:
 1. android studio
-2.flutter
+2. 
+3.flutter
 
 Steps to run this app
 
