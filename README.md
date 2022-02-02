@@ -4,13 +4,21 @@ to do app
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this app you need the following:
+1. android studio
+2.flutter
 
-A few resources to get you started if this is your first Flutter project:
+Steps to run this app
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1.clone repository through this link https://github.com/teerenzo/mytodo/tree/master
+2.import cloned folder in android studio
+3. get all packages that are in pubspec.yaml
+4. run app in device
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## challenges
+I think it was my first time using redux that is why i didnt use it becouse of time
+but i hope if chosen i will learn it from you and collegues that i will met at your place
+
+
+
+
