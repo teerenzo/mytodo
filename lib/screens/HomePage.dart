@@ -235,11 +235,11 @@ mainAxisAlignment: MainAxisAlignment.start,
                                          return AddTask();
                                        }));
                                      },
+                                         color: HexColor("#0C0D0D"),
                                      child: Text(
                                        "start with a new Task",
                                        style: TextStyle(
-                                         color: Colors.white,
-                                         backgroundColor: HexColor("#0C0D0D")
+                                         color: Colors.white
                                        ),
                                      ))
 
